@@ -7,6 +7,8 @@ const logout = async () => {
     if (response.ok) {
       document.location.replace('/login');
     } else {
+        //TODO: replace alert() with model to display error messages
+        
       alert(response.statusText);
     }
   };

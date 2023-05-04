@@ -14,6 +14,7 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/');
       } else {
+        //TODO: replace alert() with model to display error messages HINT:follow pattern in above if statement
         alert('Failed to log in');
       }
     }
