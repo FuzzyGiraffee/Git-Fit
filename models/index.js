@@ -7,9 +7,9 @@ const Workout = require('./Workout')
 
 
 
-Exercises.belongsToMany(Plans,{
+//Exercises.belongsToMany(Plans,{
 
-});
+//});
 
 
 
