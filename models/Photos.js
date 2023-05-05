@@ -1,8 +1,8 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, STRING } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Photos extends Model {}
-
+//photos uploaded by user to be displayed to share
 Photos.init(
     {
         id: {
@@ -11,6 +11,14 @@ Photos.init(
             primaryKey: true,
             autoIncrement: true,
           },
+        description: {
+            type:STRING,
+            allowNull: true,
+        },
+        //TODO: figure out how to reference images in a Database
+        // photo: {
+            
+        // },   
     },
     {
     sequelize,

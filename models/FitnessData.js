@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class FitnessData extends Model {}
-
+//users current fitness information, includes exercises and workouts. used to track progress
 FitnessData.init(
     {
         id: {
@@ -11,6 +11,20 @@ FitnessData.init(
             primaryKey: true,
             autoIncrement: true,
           },
+        exercise_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'exercise',
+                key: 'id'
+            }
+        },
+        workout_id:{
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'plans',
+                key: 'id'
+            }
+        }
     },
     {
     sequelize,

@@ -7,9 +7,9 @@ const Workout = require('./Workout')
 
 
 
-Exercises.belongsToMany(Plans,{
+// Exercises.belongsToMany(Plans,{
 
-});
+// });
 
 
 
@@ -17,4 +17,4 @@ User.hasMany(Photos, {
     foreignKey: 'user_id'
 });
 
-module.exports = { User, Plans, Photos, FitnessData, Exercises};
+module.exports = { User, Plans, Photos, FitnessData, Exercises, Workout};

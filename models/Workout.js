@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Workout extends Model {}
-
+//List of User completed workouts
 Workout.init(
     {
         id: {
@@ -10,6 +10,13 @@ Workout.init(
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
+          },
+        plan_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'plans',
+                key: 'id'
+            }
           },
     },
     {
