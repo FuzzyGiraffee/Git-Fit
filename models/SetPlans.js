@@ -24,6 +24,13 @@ Plans.init(
             validate: {
                 isDate: true,
             },
+        exercise_id: {
+            type: DataTypes.INTEGER,
+            references:{ 
+                model: 'exercise',
+                key: 'id'
+            }
+        },
         workout_id: {
             type: DataTypes.INTEGER,
             references: {

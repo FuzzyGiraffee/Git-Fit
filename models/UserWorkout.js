@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Workout extends Model {}
-//List of User completed workouts
+//List of User assigned workouts
 Workout.init(
     {
         id: {
