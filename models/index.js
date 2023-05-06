@@ -5,19 +5,19 @@ const FitnessData = require('./UserFitnessData')
 const Exercises = require('./Exercises')
 const Workout = require('./UserWorkout')
 
-Exercises.belongsToMany(Plans,{
+// Exercises.belongsToMany(Plans,{
 
-});
+// });
 
-Workout.belongsToMany(Exercises,{
-});
+// Workout.belongsToMany(Exercises,{
+// });
 
-Plans.hasMany(Workout,{
+// Plans.hasMany(Workout,{
 
-});
+// });
 
-Plans.hasMany(Exercises,{
-});
+// Plans.hasMany(Exercises,{
+// });
 
 
 
