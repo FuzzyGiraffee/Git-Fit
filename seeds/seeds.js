@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const { User,/**  Plans, Photos, FitnessData, Exercises, Workout */} = require('../models');
+const { User } = require('../models');
 
 const userSeedData = require('./users.json')
 // // const exerciseSeedData = require('./exercises.json');
