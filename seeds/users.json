@@ -2,21 +2,21 @@
     {
         "name":"Greggory",
         "email":"greggorry@gmail.com",
-        "password":""
+        "password":"test123"
     },
     {
         "name":"jeremy",
         "email":"jeremy@gmail.com",
-        "password":""
+        "password":"test123"
     },
     {
         "name":"summer",
         "email":"summer@gmail.com",
-        "password":""
+        "password":"test123"
     },
     {
         "name":"Violet",
         "email":"Violetta@gmail.com",
-        "password":""
+        "password":"test123"
     }
     ]
