@@ -14,6 +14,7 @@ Workout.belongsToMany(Exercises,{
     foreignKey: 'workout_id'
 });
 
+
 Plans.hasMany(Workout,{
     foreignKey: 'plan_id'
 });
@@ -21,6 +22,8 @@ Plans.hasMany(Workout,{
 Plans.hasMany(Exercises,{
     foreignKey: 'plan_id'
 });
+
+
 
 
 
