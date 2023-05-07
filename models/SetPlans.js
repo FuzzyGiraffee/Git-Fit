@@ -1,6 +1,6 @@
 const { Model, DataTypes, STRING } = require('sequelize');
 const sequelize = require('../config/connection');
-
+// "":"",
 class Plans extends Model {}
 //Selection of avalible workout Plans. Conists of exercises over a period of time.
 Plans.init(
