@@ -11,42 +11,12 @@ const seedDatabase = async () => {
 
      await User.bulkCreate (userSeedData);
 
-     await Plans.bulkCreate (plansSeedData);
-
      await Exercises.bulkCreate (exerciseSeedData);
 
-     await UserWorkout.bulkCreate(userWorkoutSeedData)
-    /* const exercises = await Exercises.bulkCreate(exerciseSeedData);
-    const plans = await Plans.bulkCreate(plansSeedData);
+     await Plans.bulkCreate (plansSeedData);
 
-    for (const { id } of exercises) {
-        const newExercise = await Plans.create({
-            exercise_id: id,
-        });     
-    }
+     await UserWorkout.bulkCreate(userWorkoutSeedData);
 
-    for (const { id } of plans) {
-        const newPlan =  await Exercises.create({
-            plans_id: id,
-        })
-    }
-
-    for (const exercise of plansSeedData) {
-        const exercise = await Plans.create({
-            ...Exercises
-        })
-        // const workout = await Workout.create({
-        //     ...Workout
-        // })
-    }
-
-    for (const workout of exerciseSeedData) {
-        const newWorkout = await Workout.create({
-            ...Workout,
-        });
-    } */
-
-   
 
     process.exit(0);
 }

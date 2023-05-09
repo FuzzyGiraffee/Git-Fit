@@ -37,8 +37,8 @@
             foreignKey: 'userexercises_id' 
         });
 
-        UserExercises.hasOne(UserWorkout,{
-            foreignKey: 'userexercises_id'
+        UserExercises.belongsTo(UserWorkout,{
+            foreignKey: 'userworkout_id'
         });
 
         UserWorkout.hasMany(UserExercises,{

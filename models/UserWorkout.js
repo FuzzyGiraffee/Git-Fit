@@ -15,27 +15,43 @@ UserWorkout.init(
         
         monday:{
             type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         tuesday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         wendesday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         tuesday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         thursday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         friday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         saturday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         sunday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         plan_id: {
             type: DataTypes.INTEGER,
