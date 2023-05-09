@@ -27,6 +27,7 @@ Exercises.init(
         repitiions: {
             type:DataTypes.INTEGER,
             allowNull:false,
+            defaultValue:"3"
         },
         recomended_number_of_days: {
             type:DataTypes.INTEGER,
