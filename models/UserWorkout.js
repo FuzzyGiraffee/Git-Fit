@@ -11,12 +11,14 @@ Workout.init(
             primaryKey: true,
             autoIncrement: true,
           },
+        //TODO: add user association "one user has one plan"
         plan_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'plans',
                 key: 'id'
             }
+        //TODO: add days fields
           },
     },
     {
