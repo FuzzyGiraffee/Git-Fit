@@ -1,0 +1,28 @@
+<!-- views/signup.handlebars -->
+
+<h2>Sign Up</h2>
+
+<!-- Display any flash messages -->
+{{#if message}}
+  <p class="{{message.type}}">{{message.text}}</p>
+{{/if}}
+
+<form id="signupForm" class="form signup-form" action="/signup" method="POST">
+  <div class="form-group">
+    <label for="email-signup">email:</label>
+    <input class="form-input" type="text" id="email-signup" name="email"/>
+  </div>
+  <div class="form-group">
+    <label for="set-username">Set username:</label>
+    <input class="form-input" type="text" id="set-username" name="username"/>
+  </div>
+  <div class="form-group">
+    <label for="set-password">Set password:</label>
+    <input class="form-input" type="password" id="set-password" name="password"/>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit">Create account</button>
+  </div>
+</form>
+
+<script src="/js/signup.js"></script> <!-- replace with script for signup js after it is created under public folder -->

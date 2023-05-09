@@ -1,22 +1,22 @@
 [
     {
-        "name":"Greggory",
+        "username":"Greggory",
         "email":"greggorry@gmail.com",
         "password":"test123"
     },
     {
-        "name":"jeremy",
+        "username":"jeremy",
         "email":"jeremy@gmail.com",
-        "password":"test123"
+        "password":""
     },
     {
-        "name":"summer",
+        "username":"summer",
         "email":"summer@gmail.com",
-        "password":"test123"
+        "password":""
     },
     {
-        "name":"Violet",
+        "username":"Violet",
         "email":"Violetta@gmail.com",
-        "password":"test123"
+        "password":""
     }
     ]
