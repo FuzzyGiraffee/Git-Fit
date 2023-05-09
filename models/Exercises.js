@@ -1,6 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+
+/**TODO: get list of exercises for each plan from kaileon*/
+
 class Exercises extends Model {}
 //Individual excercises that are avalible
 //TODO: Finish this schema
@@ -24,23 +27,19 @@ Exercises.init(
         repitiions: {
             type:DataTypes.INTEGER,
             allowNull:false,
+        },
+        recomended_number_of_days: {
+            type:DataTypes.INTEGER,
 
         },
-        //todo: number of recommended days
-        plan_id: {
-            type:DataTypes.INTEGER,
-            references: {
-                model:'plans',
-                key:'id'
-            },
-        },
-        workout_id:{
+        plan_id:{
             type: DataTypes.INTEGER,
             references: {
-                model: 'userworkout',
+                model: 'plans',
                 key: 'id'
-            },
+            }
         }
+    
     },
     {
     sequelize,

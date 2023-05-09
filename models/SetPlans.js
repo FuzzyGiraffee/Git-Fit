@@ -18,21 +18,12 @@ Plans.init(
                 isAlpha: true,
             }
         }, 
-        //comprised of many
-        exercise_id: {
-            type: DataTypes.INTEGER,
-            references:{ 
-                model: 'exercise',
-                key: 'id'
-            }
-        },
-        //is apart of user workout
-        workout_id: {
+        user_id:{
             type: DataTypes.INTEGER,
             references: {
-                model: 'userworkout',
+                model: 'user',
                 key: 'id'
-            }
+            },
         }
     },
     {
