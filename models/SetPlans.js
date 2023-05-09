@@ -18,12 +18,14 @@ Plans.init(
                 isAlpha: true,
             }
         }, 
+        //has multiple
         date: {
             type: STRING(9),
-            allowNull: false,
+            allowNull: true,
             validate: {
                 isDate: true,
             },
+        //comprised of many
         exercise_id: {
             type: DataTypes.INTEGER,
             references:{ 
@@ -31,10 +33,11 @@ Plans.init(
                 key: 'id'
             }
         },
+        //is apart of user workout
         workout_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'workout',
+                model: 'userworkout',
                 key: 'id'
             }
         },
