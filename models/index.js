@@ -1,37 +1,50 @@
 const User = require('./User');
-// const Plans = require('./SetPlans')
+const Plans = require('./SetPlans')
+const Exercises = require('./Exercises')
+const Workout = require('./UserWorkout')
+
 // const Photos = require('./Photos')
 // const FitnessData = require('./UserFitnessData')
-// const Exercises = require('./Exercises')
-// const Workout = require('./UserWorkout')
-
-// Exercises.belongsToMany(Plans,{
-//     foreignKey: 'exercise_id',
-    
-// });
-
-// Workout.belongsToMany(Exercises,{
-//     foreignKey: 'workout_id'
-// });
 
 
-// Plans.hasMany(Workout,{
-//     foreignKey: 'plan_id'
-// });
+Plans.hasMany(Workout,{
+    foreignKey: 'plan_id'
+});
 
-// Plans.hasMany(Exercises,{
-//     foreignKey: 'plan_id'
-// });
+Plans.hasMany(Exercises,{
+    foreignKey: 'plan_id'
+});
+
+Plans.belongsToMan(User,{
+    foreignKey: 'plan_id'
+})
+
+Exercises.belongsToMany(Plans,{
+    foreignKey: 'exercise_id',
+});
+
+Workout.hasMany(Plans,{
+    foreignKey: 'workout_id'
+});
+
+Workout.belongsToMany(User,{
+    foreignKey: 'workout_id'
+});
+
+User.hasMany(Plans,{
+    foreignKey: 'user_id'
+});
+
+User.hasOne(Workout,{
+    foreignKey: 'user_id'
+});
 
 
 
+module.exports = { User, Plans,  Exercises, Workout /**Photos, FitnessData*/};
 
 
-//TODO: add user assications once main branch is updated by Jesus
-// User.hasOne(Plans,{
-
-// });
-
+//DEPRECATED, ONLY USE IF MVP IS EXPANDED TO INCLUDE EITHER PHOTOS OR OVER TIME FITNESS TRACKING
 // User.hasOne(FitnessData,{
 
 // });
@@ -40,13 +53,6 @@ const User = require('./User');
 
 // });
 
-// User.hasMany(Workout,{
-
-// });
-
-
 // User.hasMany(Photos, {
 //     foreignKey: 'user_id'
 // });
-
-module.exports = { User /*, Plans, Photos, FitnessData, Exercises, Workout*/};

@@ -26,6 +26,7 @@ Exercises.init(
             allowNull:false,
 
         },
+        //todo: number of recommended days
         plan_id: {
             type:DataTypes.INTEGER,
             references: {
@@ -36,7 +37,7 @@ Exercises.init(
         workout_id:{
             type: DataTypes.INTEGER,
             references: {
-                model: 'plans',
+                model: 'userworkout',
                 key: 'id'
             },
         }

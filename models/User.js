@@ -45,7 +45,7 @@ User.init(
     user_workout_id:{
       ftype: DataTypes.INTEGER,
       references: {
-          model: 'userworkoutdata',
+          model: 'userworkout',
           key: 'id'
       }
     },
