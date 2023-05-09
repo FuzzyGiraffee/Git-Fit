@@ -1,22 +1,28 @@
+/**TODO: get list of exercises for each plan from kaileon*/
+
 [
 {
     "name":"deadlift",
     "weight":"70lbs",
-    "repitions":"5"
+    "repitions":"5",
+    "recommended_number_of_days":""
 },
 {
     "name":"squat",
     "weight":"100lbs",
-    "repitions":"5"
+    "repitions":"5",
+    "recommended_number_of_days":""
 },
 {
     "name":"benchpress",
     "weight":"50",
-    "repitions":"3"
+    "repitions":"3",
+    "recommended_number_of_days":""
 },
 {
     "name":"overhead press",
     "weight":"30",
-    "repitions":"3"
+    "repitions":"3",
+    "recommended_number_of_days":""
 }
 ]

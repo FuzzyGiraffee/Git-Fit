@@ -6,7 +6,7 @@ const Workout = require('./UserWorkout')
 // const Photos = require('./Photos')
 // const FitnessData = require('./UserFitnessData')
 
-
+//TODO: sort out on delete functionality/relationships
 Plans.hasMany(Workout,{
     foreignKey: 'plan_id'
 });
