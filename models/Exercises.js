@@ -25,19 +25,20 @@ Exercises.init(
             type:DataTypes.INTEGER,
             allowNull:false,
 
-        },plan_id: {
+        },
+        plan_id: {
             type:DataTypes.INTEGER,
             references: {
                 model:'plans',
                 key:'id'
+            },
         },
         workout_id:{
             type: DataTypes.INTEGER,
             references: {
                 model: 'plans',
                 key: 'id'
-
-            }
+            },
         }
     },
     {
