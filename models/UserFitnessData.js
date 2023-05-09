@@ -21,7 +21,7 @@ FitnessData.init(
         workout_id:{
             type: DataTypes.INTEGER,
             references: {
-                model: 'plans',
+                model: 'workout',
                 key: 'id'
             }
         }

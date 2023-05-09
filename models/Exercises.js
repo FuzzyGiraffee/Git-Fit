@@ -24,11 +24,19 @@ Exercises.init(
         repitiions: {
             type:DataTypes.INTEGER,
             allowNull:false,
+
         },plan_id: {
             type:DataTypes.INTEGER,
             references: {
                 model:'plans',
                 key:'id'
+        },
+        workout_id:{
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'plans',
+                key: 'id'
+
             }
         }
     },

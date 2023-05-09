@@ -1,0 +1,22 @@
+[
+{
+    "name":"deadlift",
+    "weight":"70lbs",
+    "repitions":"5"
+},
+{
+    "name":"squat",
+    "weight":"100lbs",
+    "repitions":"5"
+},
+{
+    "name":"benchpress",
+    "weight":"50",
+    "repitions":"3"
+},
+{
+    "name":"overhead press",
+    "weight":"30",
+    "repitions":"3"
+}
+]

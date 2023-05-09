@@ -2,11 +2,42 @@ const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
+
+router.get('/signup', (req, res) => {
+  res.render('signup');
+});
+
+router.post('/signup', async (req, res) => {
+  console.log('Made it to post route');
+  try {
+      const newUser = await User.create({
+          username: req.body.username,
+          email: req.body.email,
+          password: req.body.password,
+      });
+      console.log('I created the user in db');
+      req.session.save(() => {
+          req.session.user_id = newUser.id;
+          req.session.logged_in = true;
+          
+          res.status(200).json(newUser);
+          //res.redirect('/');
+          return;
+          
+      });
+
+  } catch (err) {
+      res.status(400).json(err);
+  }
+});
+
+
+
 router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+      order: [['username', 'ASC']],
     });
 
     const users = userData.map((project) => project.get({ plain: true }));
