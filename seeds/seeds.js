@@ -8,7 +8,7 @@ const userSeedData = require('./users.json')
 const seedDatabase = async () => {
      await sequelize.sync({ force: true });
 
-     const user = await User.bulkCreate (userSeedData);
+     await User.bulkCreate (userSeedData);
 
     /* const exercises = await Exercises.bulkCreate(exerciseSeedData);
     const plans = await Plans.bulkCreate(plansSeedData);

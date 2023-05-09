@@ -49,4 +49,4 @@ const User = require('./User');
 //     foreignKey: 'user_id'
 // });
 
-module.exports = { User, /*Plans, Photos, FitnessData, Exercises, Workout*/};
+module.exports = { User /*, Plans, Photos, FitnessData, Exercises, Workout*/};
