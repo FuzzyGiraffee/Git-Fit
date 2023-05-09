@@ -35,6 +35,7 @@ User.init(
         len: [8],
       },
     },
+    //TODO: add reference to workout plans, workout, and fitness data. if MVP is expanded add reference to exercise and photos.
   },
   {
     hooks: {

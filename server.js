@@ -23,6 +23,12 @@ const sess = {
   })
 };
 
+// app.use(session({
+//   secret: 'sd#44fg%6677ddA@',
+//   resave: false,
+//   saveUninitialized: true
+// }));
+
 app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
