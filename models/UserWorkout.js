@@ -1,9 +1,9 @@
 const { Model, DataTypes, INTEGER } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Workout extends Model {}
+class UserWorkout extends Model {}
 //List of User assigned workouts pulled from plans
-Workout.init(
+UserWorkout.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -15,27 +15,43 @@ Workout.init(
         
         monday:{
             type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         tuesday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         wendesday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         tuesday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         thursday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         friday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         saturday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         sunday:{
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
         },
         plan_id: {
             type: DataTypes.INTEGER,
@@ -57,8 +73,8 @@ Workout.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Workout',
+    modelName: 'userWorkout',
     }
 )
 
-module.exports = Workout;
+module.exports = UserWorkout;

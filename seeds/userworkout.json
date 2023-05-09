@@ -1,0 +1,23 @@
+[
+    {
+        "monday": "true"
+    },
+    {
+        "tuesday": "true"
+    },
+    {
+        "wendesday": "true"
+    },
+    {
+        "thursday": "true"
+    },
+    {
+        "friday": "true"
+    },
+    {
+        "saturday": "true"
+    },
+    {
+        "sunday": "true"
+    }
+]

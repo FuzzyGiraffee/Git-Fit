@@ -12,7 +12,7 @@ User.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       primaryKey: true,
       autoIncrement: true,
     },
@@ -35,17 +35,17 @@ User.init(
         len: [8],
       },
     },
-    plan_id:{
+    userWorkout_id:{
       type: DataTypes.INTEGER,
             references: {
-                model: 'plan',
+                model: 'Userworkout',
                 key: 'id'
     },
     },
-    user_workout_id:{
-      ftype: DataTypes.INTEGER,
+    userExercises_id:{
+      type: DataTypes.INTEGER,
       references: {
-          model: 'userworkout',
+          model: 'UserExercises',
           key: 'id'
       }
     },
