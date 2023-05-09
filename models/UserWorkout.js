@@ -44,13 +44,13 @@ Workout.init(
                 key: 'id'
             }
         },
-            user_id:{
-                type: DataTypes.INTEGER,
-                    references:{
-                        model: 'user',
-                        id: 'id'
-                    }
-            },
+        user_id:{
+            type: DataTypes.INTEGER,
+             references:{
+                 model: 'user',
+                 id: 'id'
+            }
+        },
     },
     {
     sequelize,
