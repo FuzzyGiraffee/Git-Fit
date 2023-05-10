@@ -1,0 +1,111 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f7f7f7;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #1f8ecd;
+  text-decoration: none;
+}
+
+/* Header styles */
+header {
+  background-color: #4c1f94;
+  color: white;
+  padding: 20px;
+}
+
+/* Main styles */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-top: 30px;
+}
+
+section h2 {
+  color: #4c1f94;
+}
+
+/* Calendar styles */
+#calendar {
+  margin-top: 30px;
+}
+
+/* Form styles */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="submit"] {
+  background-color: #4c1f94;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #3a176b;
+}
+
+/* FullCalendar styles */
+.fc-daygrid-event {
+  background-color: #1f8ecd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.fc-daygrid-event:hover {
+  background-color: #1669a9;
+}
+
+.fc-today {
+  background-color: #f7f7f7;
+}
+
+.fc-today button {
+  border-color: #1f8ecd;
+  color: #1f8ecd;
+}
+
+.fc-toolbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4c1f94;
+}
