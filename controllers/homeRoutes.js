@@ -8,20 +8,25 @@ router.get('/signup', (req, res) => {
 });
 
 router.post('/signup', async (req, res) => {
-  console.log('Made it to post route');
+  //error leads here
+  // console.log('Made it to post route');
+  // console.log(req.body);
   try {
       const newUser = await User.create({
           username: req.body.username,
           email: req.body.email,
           password: req.body.password,
       });
+
       console.log('I created the user in db');
       req.session.save(() => {
+        //when a new user is created it redirects you to '/'
           req.session.user_id = newUser.id;
           req.session.logged_in = true;
-          
+          req.session.newUser =  newUser;
+          //commented out since it was not allowing user to be created and redirect properly without an error; can only do funcitonality on line 26 OR 27, can only do res res. once.
           res.status(200).json(newUser);
-          //res.redirect('/');
+          // res.redirect('/');
           return;
           
       });
@@ -31,33 +36,26 @@ router.post('/signup', async (req, res) => {
   }
 });
 
-
-
-router.get('/', withAuth, async (req, res) => {
-  try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['username', 'ASC']],
-    });
-
-    const users = userData.map((project) => project.get({ plain: true }));
-
-    res.render('login', {
-      users,
-      logged_in: req.session.logged_in,
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
-    return;
-  }
+    return;}
+});
 
-  res.render('login');
+router.get('/', (req, res) => {
+ //is the user logged in?
+  try {
+    if (req.session.logged_in){
+      //yes? redirect to home?
+      res.render('home')
+    }
+    //no? redirect to login screen
+    else {
+      res.redirect('/api/users/login');
+    }  
+    }catch (err) {
+        res.status(500).json(err);
+      }
 });
 
 //Weightloss route set to render with the handlebars weightloss template
