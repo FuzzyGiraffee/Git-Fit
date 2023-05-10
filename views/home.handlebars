@@ -3,23 +3,34 @@
       {
         "imports": {
           "@fullcalendar/core": "https://cdn.skypack.dev/@fullcalendar/core@6.1.7",
-          "@fullcalendar/daygrid": "https://cdn.skypack.dev/@fullcalendar/daygrid@6.1.7"
+          "@fullcalendar/interaction": "https://cdn.skypack.dev/@fullcalendar/interaction@6.1.",
+          "@fullcalendar/daygrid": "https://cdn.skypack.dev/@fullcalendar/daygrid@6.1.7",
+          "@fullcalendar/timegrid": "https://cdn.skypack.dev/@fullcalendar/timegrid@6.1.7",
+          "@fullcalendar/list": "https://cdn.skypack.dev/@fullcalendar/list@6.1.7"
+          
         }
       }
     </script>
     <script type='module'>
       import { Calendar } from '@fullcalendar/core'
       import dayGridPlugin from '@fullcalendar/daygrid'
+      import interactionPlugin from '@fullcalendar/daygrid'
+      import timeGridPlugin from '@fullcalendar/timegrid'
+      import listPlugin from '@fullcalendar/list'
 
       document.addEventListener('DOMContentLoaded', function() {
         const calendarEl = document.getElementById('calendar')
         const calendar = new Calendar(calendarEl, {
-          plugins: [dayGridPlugin],
+          plugins: [dayGridPlugin, interactionPlugin, timeGridPlugin, listPlugin],
+          initialview: 'timeGridWeek',
+          selectable: true,
+          nowIndicator: true,
           headerToolbar: {
             left: 'prev,next today',
             center: 'title',
             right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
           }
+
         })
         calendar.render()
       })
