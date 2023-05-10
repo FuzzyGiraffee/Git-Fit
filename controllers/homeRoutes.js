@@ -76,4 +76,9 @@ router.get('/dashboard', (req, res) => {
 });
 
 
+router.get('/logout', (req, res) => {
+  res.render('logout', { title: 'Logout', message: 'You are logged out!' });
+});
+
+
 module.exports = router;
