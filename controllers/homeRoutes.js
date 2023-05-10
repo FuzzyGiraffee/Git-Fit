@@ -64,11 +64,17 @@ router.get('/login', (req, res) => {
 router.get('/weightloss', (req, res) => {
   res.render('weightloss', { title: 'weightloss', message: 'Lets lose some weight' });
 });
+//bulking route set to render bulking handlebars
 router.get('/bulking', (req, res) => {
   res.render('bulking', { title: 'bulking', message: 'Time to bulk up' });
 });
+//maintaining route setup to render maintaining handlebars
 router.get('/maintaining', (req, res) => {
   res.render('maintaining', { title: 'maintaining', message: 'Lets maintain' });
+});
+
+router.get('/dashboard', (req, res) => {
+  res.render('home', { title: 'Dashboard', message: 'Homepage' });
 });
 
 
