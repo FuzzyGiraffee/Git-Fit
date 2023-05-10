@@ -43,3 +43,25 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+
+
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+});
+
+app.get('/weightloss', (req, res) => {
+  res.sendFile(__dirname + '/public/weightloss.html');
+});
+
+app.get('/bulking', (req, res) => {
+  res.sendFile(__dirname + '/public/bulking.html');
+});
+
+app.get('/maintaining', (req, res) => {
+  res.sendFile(__dirname + '/public/maintaining.html');
+});
+
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
