@@ -22,7 +22,7 @@ router.post('/signup', async (req, res) => {
       req.session.save(() => {
         //when a new user is created it redirects you to '/'
           req.session.user_id = newUser.id;
-          req.session.logged_in = true;
+          // req.session.logged_in = true;
           req.session.newUser =  newUser;
           //commented out since it was not allowing user to be created and redirect properly without an error; can only do funcitonality on line 26 OR 27, can only do res res. once.
           res.status(200).json(newUser);
@@ -49,10 +49,9 @@ router.get('/', (req, res) => {
       //yes? redirect to home?
       res.render('home')
     }
-    //no? redirect to login screen
     else {
-      res.redirect('/api/users/login');
-    }  
+      res.render('login')
+    }
     }catch (err) {
         res.status(500).json(err);
       }
