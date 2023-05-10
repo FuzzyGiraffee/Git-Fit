@@ -60,4 +60,9 @@ router.get('/login', (req, res) => {
   res.render('home');
 });
 
+//Weightloss route set to render with the handlebars weightloss template
+router.get('/weightloss', (req, res) => {
+  res.render('weightloss', { title: 'weightloss', message: 'Lets lose some weight' });
+});
+
 module.exports = router;
