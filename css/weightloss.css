@@ -1,0 +1,48 @@
+/* Background color */
+body {
+  background-color: #4b4d4f;
+}
+
+/* Main header */
+header {
+  background-color: #00adb5;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* Main section */
+section {
+  margin: 2rem 0;
+}
+
+/* Section headings */
+section h2 {
+  font-size: 2rem;
+  color: #00adb5;
+}
+
+/* List items */
+ul li {
+  list-style: none;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+/* Checkbox labels */
+label {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+/* Checkbox input */
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* Calendar */
+#calendar {
+  margin-top: 2rem;
+  background-color: #393e46;
+  color: #fff;
+  padding: 1rem;
+}
