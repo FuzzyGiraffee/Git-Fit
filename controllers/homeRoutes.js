@@ -42,7 +42,7 @@ router.get('/', withAuth, async (req, res) => {
 
     const users = userData.map((project) => project.get({ plain: true }));
 
-    res.render('home', {
+    res.render('login', {
       users,
       logged_in: req.session.logged_in,
     });
@@ -57,12 +57,19 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('home');
+  res.render('login');
 });
 
 //Weightloss route set to render with the handlebars weightloss template
 router.get('/weightloss', (req, res) => {
   res.render('weightloss', { title: 'weightloss', message: 'Lets lose some weight' });
 });
+router.get('/bulking', (req, res) => {
+  res.render('bulking', { title: 'bulking', message: 'Time to bulk up' });
+});
+router.get('/maintaining', (req, res) => {
+  res.render('maintaining', { title: 'maintaining', message: 'Lets maintain' });
+});
+
 
 module.exports = router;
