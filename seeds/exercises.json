@@ -1,5 +1,23 @@
 [
 {
+    "name":"planks",
+    "weight":"",
+    "repititions":"",
+    "recommended_number_of_days":""
+},
+{
+    "name":"run/cardio",
+    "weight":"",
+    "repititions":"",
+    "recommended_number_of_days":""
+},
+{
+    "name":"curls",
+    "weight":"",
+    "repititions":"",
+    "recommended_number_of_days":""
+},
+{
     "name":"deadlift",
     "weight":"70lbs",
     "repitions":"5",
@@ -18,9 +36,39 @@
     "recommended_number_of_days":"3"
 },
 {
-    "name":"overhead press",
+    "name":"shoulder press",
     "weight":"30",
     "repitions":"3",
     "recommended_number_of_days":"3"
+},
+{
+    "name":"barbell rows",
+    "weight":"",
+    "repititions":"",
+    "recommended_number_of_days":""
+},
+{
+    "name":"shoulder press",
+    "weight":"",
+    "repititions":"",
+    "recommended_number_of_days":""
+},
+{
+    "name":"cardo/run",
+    "weight":"",
+    "repititions":"",
+    "recommended_number_of_days":""
+},
+{
+    "name":"strength training",
+    "weight":"",
+    "repititions":"",
+    "recommended_number_of_days":""
+},
+{
+    "name":"flexability",
+    "weight":"",
+    "repititions":"",
+    "recommended_number_of_days":""
 }
 ]
