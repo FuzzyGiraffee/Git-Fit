@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fullcalendar/interaction": "^6.1.7",
+    "@fullcalendar/list": "^6.1.7",
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.6",
     "dotenv": "^16.0.3",
