@@ -8,21 +8,25 @@ router.get('/signup', (req, res) => {
 });
 
 router.post('/signup', async (req, res) => {
-  console.log('Made it to post route');
+  //error leads here
+  // console.log('Made it to post route');
+  // console.log(req.body);
   try {
       const newUser = await User.create({
           username: req.body.username,
           email: req.body.email,
           password: req.body.password,
       });
+
       console.log('I created the user in db');
       req.session.save(() => {
         //when a new user is created it redirects you to '/'
           req.session.user_id = newUser.id;
           req.session.logged_in = true;
           req.session.newUser =  newUser;
+          //commented out since it was not allowing user to be created and redirect properly without an error; can only do funcitonality on line 26 OR 27, can only do res res. once.
           res.status(200).json(newUser);
-          res.redirect('/');
+          // res.redirect('/');
           return;
           
       });
