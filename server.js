@@ -4,6 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const weightlossRedirect = require('./controllers/weightlossLink');
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -23,11 +24,7 @@ const sess = {
   })
 };
 
-// app.use(session({
-//   secret: 'sd#44fg%6677ddA@',
-//   resave: false,
-//   saveUninitialized: true
-// }));
+
 
 app.use(session(sess));
 
@@ -65,3 +62,5 @@ app.get('/maintaining', (req, res) => {
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
+
+app.get('weightloss', weightlossRedirect.weightLossRoute)
