@@ -15,6 +15,7 @@ form.addEventListener('submit', async (event) => {
 
     try {
         console.log('In creation');
+        //current error: there is no /signup route
         const response = await fetch('/signup', {
             method: 'POST',
             body: JSON.stringify(newUser),
