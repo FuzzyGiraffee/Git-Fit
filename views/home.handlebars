@@ -1,4 +1,29 @@
 <!DOCTYPE html>
+ <script type='importmap'>
+      {
+        "imports": {
+          "@fullcalendar/core": "https://cdn.skypack.dev/@fullcalendar/core@6.1.7",
+          "@fullcalendar/daygrid": "https://cdn.skypack.dev/@fullcalendar/daygrid@6.1.7"
+        }
+      }
+    </script>
+    <script type='module'>
+      import { Calendar } from '@fullcalendar/core'
+      import dayGridPlugin from '@fullcalendar/daygrid'
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const calendarEl = document.getElementById('calendar')
+        const calendar = new Calendar(calendarEl, {
+          plugins: [dayGridPlugin],
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+          }
+        })
+        calendar.render()
+      })
+</script>
 <html>
 <head>
   <title>Git Fit</title>
@@ -39,7 +64,7 @@
     <h2>Maintaining</h2>
     <p>Content for maintaining section goes here.</p>
   </script>
-
+<div id="calendar"></div>
   <script src="/js/home.js"></script>
 </body>
 </html>
