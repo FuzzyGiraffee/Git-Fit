@@ -1,9 +1,9 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, INTEGER } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Workout extends Model {}
-//List of User assigned workouts
-Workout.init(
+class UserWorkout extends Model {}
+//List of User assigned workouts pulled from plans
+UserWorkout.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -12,22 +12,69 @@ Workout.init(
             autoIncrement: true,
           },
         //TODO: add user association "one user has one plan"
+        
+        monday:{
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
+        },
+        tuesday:{
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
+        },
+        wendesday:{
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
+        },
+        tuesday:{
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
+        },
+        thursday:{
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
+        },
+        friday:{
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
+        },
+        saturday:{
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
+        },
+        sunday:{
+            type: DataTypes.BOOLEAN,
+            allowNull:false,
+            defaultValue: 1
+        },
         plan_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: 'plans',
                 key: 'id'
             }
-        //TODO: add days fields
-          },
+        },
+        user_id:{
+            type: DataTypes.INTEGER,
+             references:{
+                 model: 'user',
+                 id: 'id'
+            }
+        },
     },
     {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Workout',
+    modelName: 'userWorkout',
     }
 )
 
-module.exports = Workout;
+module.exports = UserWorkout;

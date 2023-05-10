@@ -12,7 +12,7 @@ User.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       primaryKey: true,
       autoIncrement: true,
     },
@@ -35,7 +35,27 @@ User.init(
         len: [8],
       },
     },
-    //TODO: add reference to workout plans, workout, and fitness data. if MVP is expanded add reference to exercise and photos.
+    userWorkout_id:{
+      type: DataTypes.INTEGER,
+            references: {
+                model: 'Userworkout',
+                key: 'id'
+    },
+    },
+    userExercises_id:{
+      type: DataTypes.INTEGER,
+      references: {
+          model: 'UserExercises',
+          key: 'id'
+      }
+    },
+    // fitness_data_id:{
+    //   type: DataTypes.INTEGER,
+    //         references: {
+    //             model: 'userfitnessdata',
+    //             key: 'id'
+    //         }
+    // },
   },
   {
     hooks: {

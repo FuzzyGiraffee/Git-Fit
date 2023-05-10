@@ -2,21 +2,25 @@
 {
     "name":"deadlift",
     "weight":"70lbs",
-    "repitions":"5"
+    "repitions":"5",
+    "recommended_number_of_days":"4"
 },
 {
     "name":"squat",
     "weight":"100lbs",
-    "repitions":"5"
+    "repitions":"5",
+    "recommended_number_of_days":"3"
 },
 {
     "name":"benchpress",
     "weight":"50",
-    "repitions":"3"
+    "repitions":"3",
+    "recommended_number_of_days":"3"
 },
 {
     "name":"overhead press",
     "weight":"30",
-    "repitions":"3"
+    "repitions":"3",
+    "recommended_number_of_days":"3"
 }
 ]

@@ -1,3 +1,5 @@
+/**in purgatory, may be used at some point, for now not apart of MVP*/
+
 const { Model, DataTypes, STRING } = require('sequelize');
 const sequelize = require('../config/connection');
 

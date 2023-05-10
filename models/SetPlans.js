@@ -2,7 +2,7 @@ const { Model, DataTypes, STRING } = require('sequelize');
 const sequelize = require('../config/connection');
 // "":"",
 class Plans extends Model {}
-//Selection of avalible workout Plans. Conists of exercises over a period of time.
+//Selection of avalible workout Plans. Conists of exercises, number of days a week recommended
 Plans.init(
     {
         id: {
@@ -18,26 +18,12 @@ Plans.init(
                 isAlpha: true,
             }
         }, 
-        date: {
-            type: STRING(9),
-            allowNull: false,
-            validate: {
-                isDate: true,
-            },
-        exercise_id: {
-            type: DataTypes.INTEGER,
-            references:{ 
-                model: 'exercise',
-                key: 'id'
-            }
-        },
-        workout_id: {
+        user_id:{
             type: DataTypes.INTEGER,
             references: {
-                model: 'workout',
+                model: 'user',
                 key: 'id'
-            }
-        },
+            },
         }
     },
     {

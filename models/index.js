@@ -1,52 +1,62 @@
-const User = require('./User');
-// const Plans = require('./SetPlans')
-// const Photos = require('./Photos')
-// const FitnessData = require('./UserFitnessData')
-// const Exercises = require('./Exercises')
-// const Workout = require('./UserWorkout')
+        const User = require('./User');
+        const Plans = require('./SetPlans')
+        const Exercises = require('./Exercises')
+        const UserWorkout = require('./UserWorkout')
+        const UserExercises = require('./userExercises')
 
-// Exercises.belongsToMany(Plans,{
-//     foreignKey: 'exercise_id',
-    
-// });
+        // const Photos = require('./Photos')
+        // const FitnessData = require('./UserFitnessData')
 
-// Workout.belongsToMany(Exercises,{
-//     foreignKey: 'workout_id'
-// });
-
-
-// Plans.hasMany(Workout,{
-//     foreignKey: 'plan_id'
-// });
-
-// Plans.hasMany(Exercises,{
-//     foreignKey: 'plan_id'
-// });
+        //TODO: sort out on delete functionality/relationships
+            //when a user is deleted, so are their exercises and plans
 
 
 
+        Plans.hasMany(Exercises,{
+            foreignKey: 'plan_id'
+        });
+
+        Exercises.belongsTo(Plans,{
+            foreignKey: 'plan_id',
+        });
 
 
-//TODO: add user assications once main branch is updated by Jesus
-// User.hasOne(Plans,{
+        UserWorkout.hasOne(User,{
+            foreignKey: 'userworkout_id'
+        });
 
-// });
+        User.hasOne(UserWorkout,{
+            foreignKey: 'user_id'
+        });
 
-// User.hasOne(FitnessData,{
+        User.hasOne(UserExercises,{
+            foreignKey: 'user_id'
+        });
 
-// });
+        UserExercises.hasOne(User,{
+            foreignKey: 'userexercises_id' 
+        });
 
-// User.hasMany(Photos,{
+        UserExercises.belongsTo(UserWorkout,{
+            foreignKey: 'userworkout_id'
+        });
 
-// });
+        UserWorkout.hasMany(UserExercises,{
+            foreignKey: 'userworkout_id'
+        });
 
-// User.hasMany(Workout,{
-
-// });
+        module.exports = { User, Plans,  Exercises, UserWorkout, UserExercises /**Photos, FitnessData*/};
 
 
-// User.hasMany(Photos, {
-//     foreignKey: 'user_id'
-// });
+    //DEPRECATED, ONLY USE IF MVP IS EXPANDED TO INCLUDE EITHER PHOTOS OR OVER TIME FITNESS TRACKING
+    // User.hasOne(FitnessData,{
 
-module.exports = { User /*, Plans, Photos, FitnessData, Exercises, Workout*/};
+    // });
+
+    // User.hasMany(Photos,{
+
+    // });
+
+    // User.hasMany(Photos, {
+    //     foreignKey: 'user_id'
+    // });

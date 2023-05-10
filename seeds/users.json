@@ -7,16 +7,16 @@
     {
         "username":"jeremy",
         "email":"jeremy@gmail.com",
-        "password":""
+        "password":"test123"
     },
     {
         "username":"summer",
         "email":"summer@gmail.com",
-        "password":""
+        "password":"test123"
     },
     {
         "username":"Violet",
         "email":"Violetta@gmail.com",
-        "password":""
+        "password":"test123"
     }
-    ]
+]
